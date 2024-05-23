@@ -4,7 +4,7 @@ This repository contains the video dataset collected during the Bachelor's proje
 
 ## Bachelor-thesis-Dataset
 
-This folder includes all the videos in the dataset. Additionally, it contains a `.pdf` file that describes the parameters for each video and provides some information about the object featured in each video.
+This folder includes all the videos in the dataset. Additionally, it contains a `table_of_parameters.pdf` file that describes the parameters for each video and provides some information about the object featured in each video.
 
 ## Bachelor-thesis-Experiments
 

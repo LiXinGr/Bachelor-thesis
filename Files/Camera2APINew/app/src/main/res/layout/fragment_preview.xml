@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextureView
+        android:id="@+id/previewTextureView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/parametersValueBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:background="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/previewTextureView"
+        app:layout_constraintVertical_bias="0.975">
+
+
+        <ImageView
+            android:id="@+id/captureButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/camera_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_camera_capture" />
+
+        <ImageView
+            android:id="@+id/thumbButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/thumbnail_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/captureButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_camera_thumb" />
+
+        <Chronometer
+            android:id="@+id/chronometer2"
+            android:layout_width="116dp"
+            android:layout_height="49dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/captureButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.23" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parametersValueBox"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/setValueBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/previewTextureView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/isoCurrentValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/isoText"
+            app:layout_constraintBottom_toBottomOf="@+id/parametersValueBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parametersValueBox"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <TextView
+            android:id="@+id/exposureTimeValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exposureTimeText"
+            app:layout_constraintBottom_toBottomOf="@+id/parametersValueBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parametersValueBox"
+            app:layout_constraintVertical_bias="0.512" />
+
+        <TextView
+            android:id="@+id/frameRateValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="184dp"
+            android:text="@string/frameRateText"
+            app:layout_constraintBottom_toBottomOf="@+id/parametersValueBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parametersValueBox"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <TextView
+            android:id="@+id/focusValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/focusText"
+            app:layout_constraintBottom_toBottomOf="@+id/parametersValueBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parametersValueBox"
+            app:layout_constraintVertical_bias="0.975" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setValueBox"
+        android:layout_width="409dp"
+        android:layout_height="140dp"
+        android:background="@color/crimson"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/frameRateSeekBarValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="316dp"
+            android:layout_marginTop="4dp"
+            android:text="fps: 0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox" />
+
+        <SeekBar
+            android:id="@+id/frameRateSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:max="30"
+            android:min="1"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="@+id/setValueBox"
+            app:layout_constraintEnd_toEndOf="@+id/setValueBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox"
+            app:layout_constraintVertical_bias="0.049" />
+
+        <TextView
+            android:id="@+id/focusSeekBarValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="316dp"
+            android:layout_marginTop="40dp"
+            android:text="Focus: 0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox" />
+
+        <SeekBar
+            android:id="@+id/focusSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:max="1200"
+            android:min="10"
+            android:progress="0"
+            app:layout_constraintBottom_toBottomOf="@+id/setValueBox"
+            app:layout_constraintEnd_toEndOf="@+id/setValueBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox"
+            app:layout_constraintVertical_bias="0.327" />
+
+        <TextView
+            android:id="@+id/flashSeekBarValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="316dp"
+            android:layout_marginTop="66dp"
+            android:text="Flash: 0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox" />
+
+        <SeekBar
+            android:id="@+id/flashSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:max="10000"
+            android:min="4"
+            android:progress="8"
+            app:layout_constraintBottom_toBottomOf="@+id/setValueBox"
+            app:layout_constraintEnd_toEndOf="@+id/setValueBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox"
+            app:layout_constraintVertical_bias="0.570" />
+
+        <TextView
+            android:id="@+id/exposureTimeSeekBarValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="328dp"
+            android:layout_marginTop="100dp"
+            android:text="ET: 0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox" />
+
+        <SeekBar
+            android:id="@+id/exposureTimeSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:max="15000"
+            android:min="4"
+            android:progress="8"
+            app:layout_constraintBottom_toBottomOf="@+id/setValueBox"
+            app:layout_constraintEnd_toEndOf="@+id/setValueBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox"
+            app:layout_constraintVertical_bias="0.819" />
+
+        <TextView
+            android:id="@+id/isoSeekBarValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="328dp"
+            android:text="ISO: 0"
+            app:layout_constraintBottom_toBottomOf="@+id/setValueBox"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox" />
+
+        <SeekBar
+            android:id="@+id/isoSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:max="3300"
+            android:progress="0"
+            app:layout_constraintBottom_toBottomOf="@+id/setValueBox"
+            app:layout_constraintEnd_toEndOf="@+id/setValueBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/setValueBox"
+            app:layout_constraintTop_toTopOf="@+id/setValueBox"
+            app:layout_constraintVertical_bias="0.985" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:checked="false"
+        android:text="Manual mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826" />
+
+    <!-- app:layout_constraintBottom_toTopOf="@+id/isoSeekBar" -->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Camera 2 API New</string>
+    <string name="first_image">First Image Fragment</string>
+    <string name="second_image">Second Image Fragment</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="camera_request">"Camera app request camera access "</string>
+    <string name="external_storage_request">"Camera app request external storage access "</string>
+    <string name="thumbnail_button">Displays thumbnail of captured media</string>
+    <string name="camera_button">Button for capturing video</string>
+    <string name="isoText">ISO: </string>
+    <string name="exposureTimeText">Shutter Speed: </string>
+    <string name="focusText">Focus: </string>
+    <string name="frameRateText">fps:</string>
+</resources>
